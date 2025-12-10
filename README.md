@@ -1,8 +1,7 @@
-
-***Content Manager API***
+***CONTENTNEXUS-API***
 
 **Project Overview**
-ContentManager API is designed to simplify content and author management with a clean and efficient database structure.
+ContentNexus-API is designed to simplify content and author management with a clean and efficient database structure.
 It allows users to create, read, update, and delete authors and posts seamlessly.
 Data integrity is maintained through a well-defined one-to-many relationship between authors and posts.
 The API ensures fast queries and structured data access using SQLAlchemy ORM and Pydantic validation.
@@ -33,7 +32,7 @@ VS Code
 **Installation Steps**
 *1. Clone the Repository*  
 git clone https://github.com/Pujitha-png/ContentNexus-API.git  
-cd ContentManagerAPI  
+cd ContentNexus-API  
 
 *2. Set Up the Database*  
 CREATE DATABASE contentdb;  
