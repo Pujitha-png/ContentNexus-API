@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+.env/
+
+# IDE / Editor Settings
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# OS files
+Thumbs.db
+
+# Logs and Cache
+*.log
+.cache/
+pytest_cache/
+
+# MySQL credentials or secrets (if any)
+*.env
+config.json
+
+# Build and dist files
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.bak
