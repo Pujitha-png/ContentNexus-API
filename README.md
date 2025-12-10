@@ -1,21 +1,23 @@
 ***CONTENTNEXUS-API***
 
-**Project Overview**
+**Project Overview**  
+
 ContentNexus-API is designed to simplify content and author management with a clean and efficient database structure.
 It allows users to create, read, update, and delete authors and posts seamlessly.
 Data integrity is maintained through a well-defined one-to-many relationship between authors and posts.
 The API ensures fast queries and structured data access using SQLAlchemy ORM and Pydantic validation.
 Swagger UI documentation makes it easy to explore and test all endpoints.
 
-**Features**
+**Features**  
 
-✅ Create, read, update, and delete authors and posts
-✅ Retrieve all posts by a specific author
-✅ One-to-many relationship with cascade delete support
-✅ Input validation using Pydantic schemas
-✅ Interactive API documentation with Swagger UI
+✅ Create, read, update, and delete authors and posts  
+✅ Retrieve all posts by a specific author  
+✅ One-to-many relationship with cascade delete support  
+✅ Input validation using Pydantic schemas  
+✅ Interactive API documentation with Swagger UI  
 
-**Getting Started**
+**Getting Started**  
+
 Follow these instructions to quickly set up and run the project locally for development or testing.
 You’ll need Python 3.10+, MySQL server, and pip installed on your system.
 Clone the repository, configure your database connection, and install dependencies.
@@ -24,12 +26,13 @@ This setup allows you to test all API endpoints and interact with the database e
 
 **Prerequisites**
 
-Python 3.10+
-MySQL Server
-pip package manager
+Python 3.10+  
+MySQL Server  
+pip package manager  
 VS Code
 
-**Installation Steps**
+**Installation Steps**  
+
 *1. Clone the Repository*  
 git clone https://github.com/Pujitha-png/ContentNexus-API.git  
 cd ContentNexus-API  
@@ -49,8 +52,8 @@ uvicorn main:app --reload
 Then you will see  
 http://127.0.0.1:8000.  
 Then Access Swagger UI at:  
-http://127.0.0.1:8000/docs  
-to explore all endpoints.
+http://127.0.0.1:8000/docs to explore all endpoints.
+
 
 **API Endpoints**
 
@@ -68,7 +71,7 @@ to explore all endpoints.
 | **PUT**     | `/posts/{post_id}`              | Update post content/title                      |
 | **DELETE**  | `/posts/{post_id}`              | Delete post                                    |
 
-**Example Request**  
+**Example Request**    
 POST /authors  
 {  
 "name": "John Doe",  
