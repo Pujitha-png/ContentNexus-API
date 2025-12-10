@@ -1,3 +1,4 @@
+
 ***Content Manager API***
 
 **Project Overview**
@@ -30,25 +31,27 @@ pip package manager
 VS Code
 
 **Installation Steps**
-*1. Clone the Repository*
-git clone https://github.com/<your-username>/ContentManagerAPI.git
-cd ContentManagerAPI
+*1. Clone the Repository*  
+git clone https://github.com/Pujitha-png/ContentNexus-API.git  
+cd ContentManagerAPI  
 
-*2. Set Up the Database*
-CREATE DATABASE contentdb;
+*2. Set Up the Database*  
+CREATE DATABASE contentdb;  
 
-*3.Update the connection URL in database.py*
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:your_password@localhost:3306/contentdb"
+*3.Update the connection URL in database.py*  
+SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:your_password@localhost:3306/contentdb"  
 
-*4. Install Dependencies*
-pip install -r requirements.txt
+*4. Install Dependencies*  
+pip install -r requirements.txt  
 
-*5. Run the Application*
-uvicorn main:app --reload
+*5. Run the Application*  
+uvicorn main:app --reload  
 
-Then you will see http://127.0.0.1:8000.
-Then Access Swagger UI at: http://127.0.0.1:8000/docs
- to explore all endpoints.
+Then you will see  
+http://127.0.0.1:8000.  
+Then Access Swagger UI at:  
+http://127.0.0.1:8000/docs  
+to explore all endpoints.
 
 **API Endpoints**
 
@@ -66,56 +69,52 @@ Then Access Swagger UI at: http://127.0.0.1:8000/docs
 | **PUT**     | `/posts/{post_id}`              | Update post content/title                      |
 | **DELETE**  | `/posts/{post_id}`              | Delete post                                    |
 
+**Example Request**  
+POST /authors  
+{  
+"name": "John Doe",  
+"email": "john@example.com"  
+}  
 
+**Example Response**  
+{  
+"author_id": 1,  
+"name": "John Doe",  
+"email": "john@example.com"  
+}  
 
+**Database Schema Overview**  
+**Tables:**  
+*Author*  
+author_id (Primary Key)  
+name  
+email (Unique)  
 
-**Example Request**
-POST /authors
-{
-  "name": "John Doe",
-  "email": "john@example.com"
-}
-
-**Example Response**
-{
-  "author_id": 1,
-  "name": "John Doe",
-  "email": "john@example.com"
-}
-
-**Database Schema Overview**
-**Tables:**
-*Author*
-author_id (Primary Key)
-name
-email (Unique)
-
-*Post*
-post_id (Primary Key)
-title
-content
-author_id (Foreign Key → Author.author_id)
+*Post*  
+post_id (Primary Key)  
+title  
+content  
+author_id (Foreign Key → Author.author_id)  
 
 Relationship: One-to-Many → One Author → Many Posts (Cascade delete enabled)
 
-**ER Diagram**
+**ER Diagram**  
 ![ER Diagram](./ER_Diagram.jpeg)
 
+**Technologies Used**  
+Backend: Python, FastAPI  
+Database: MySQL  
+ORM: SQLAlchemy  
+Validation: Pydantic  
+API Documentation: Swagger (OpenAPI)  
+Server: Uvicorn  
 
-**Technologies Used**
-Backend: Python, FastAPI
-Database: MySQL
-ORM: SQLAlchemy
-Validation: Pydantic
-API Documentation: Swagger (OpenAPI)
-Server: Uvicorn
-
-**Author**
+**Author**  
 Pujita Nagalakshmi Kotha – Initial Work & Development
 
-**Acknowledgements**
-Special thanks to:
-FastAPI Documentation – clear guides and examples
-SQLAlchemy Community – ORM best practices
-Pydantic Team – schema validation tools
+**Acknowledgements**  
+Special thanks to:  
+FastAPI Documentation – clear guides and examples  
+SQLAlchemy Community – ORM best practices  
+Pydantic Team – schema validation tools  
 Mentors and peers – for continuous support and feedback
